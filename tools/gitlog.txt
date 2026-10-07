@@ -1,1 +1,4 @@
-﻿d4733fb (HEAD -> main, origin/main) 初始提交：校园生活服务数据中心（Bootstrap+jQuery+ECharts+Three.js）
+﻿d2d29ce (HEAD -> main) docs: 添加运行截图与测试结果记录
+5ddb73a test: 添加 Playwright 自动化测试与截图脚本（10个测试用例）
+27c2ca7 test: 添加错误处理演示页面（网络失败/空数据/非法输入入口）
+d4733fb (origin/main) 初始提交：校园生活服务数据中心（Bootstrap+jQuery+ECharts+Three.js）
