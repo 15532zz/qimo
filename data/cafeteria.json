@@ -1,0 +1,81 @@
+{
+  "canteens": [
+    {
+      "id": 1,
+      "name": "第一食堂",
+      "location": "东区",
+      "floors": 2,
+      "seats": 800,
+      "rating": 4.5,
+      "openTime": "06:30-20:30",
+      "popular": true
+    },
+    {
+      "id": 2,
+      "name": "第二食堂",
+      "location": "西区",
+      "floors": 3,
+      "seats": 1200,
+      "rating": 4.7,
+      "openTime": "06:00-21:00",
+      "popular": true
+    },
+    {
+      "id": 3,
+      "name": "第三食堂",
+      "location": "南区",
+      "floors": 2,
+      "seats": 600,
+      "rating": 4.2,
+      "openTime": "07:00-20:00",
+      "popular": false
+    },
+    {
+      "id": 4,
+      "name": "清真食堂",
+      "location": "中区",
+      "floors": 1,
+      "seats": 300,
+      "rating": 4.6,
+      "openTime": "06:30-20:30",
+      "popular": false
+    },
+    {
+      "id": 5,
+      "name": "教工食堂",
+      "location": "北区",
+      "floors": 2,
+      "seats": 500,
+      "rating": 4.8,
+      "openTime": "06:30-19:30",
+      "popular": false
+    }
+  ],
+  "dishes": [
+    { "id": 1, "name": "红烧肉", "category": "荤菜", "price": 12, "rating": 4.8, "sales": 1520, "canteenId": 2 },
+    { "id": 2, "name": "宫保鸡丁", "category": "荤菜", "price": 10, "rating": 4.6, "sales": 1340, "canteenId": 1 },
+    { "id": 3, "name": "麻婆豆腐", "category": "素菜", "price": 6, "rating": 4.5, "sales": 1100, "canteenId": 1 },
+    { "id": 4, "name": "清蒸鱼", "category": "荤菜", "price": 15, "rating": 4.7, "sales": 680, "canteenId": 2 },
+    { "id": 5, "name": "西红柿炒蛋", "category": "素菜", "price": 5, "rating": 4.4, "sales": 1450, "canteenId": 3 },
+    { "id": 6, "name": "糖醋里脊", "category": "荤菜", "price": 11, "rating": 4.6, "sales": 980, "canteenId": 2 },
+    { "id": 7, "name": "凉拌黄瓜", "category": "凉菜", "price": 4, "rating": 4.3, "sales": 760, "canteenId": 4 },
+    { "id": 8, "name": "酸辣土豆丝", "category": "素菜", "price": 5, "rating": 4.5, "sales": 1230, "canteenId": 1 },
+    { "id": 9, "name": "红烧排骨", "category": "荤菜", "price": 14, "rating": 4.7, "sales": 870, "canteenId": 5 },
+    { "id": 10, "name": "蛋炒饭", "category": "主食", "price": 8, "rating": 4.4, "sales": 1600, "canteenId": 3 },
+    { "id": 11, "name": "牛肉面", "category": "主食", "price": 12, "rating": 4.6, "sales": 1380, "canteenId": 4 },
+    { "id": 12, "name": "紫菜蛋花汤", "category": "汤类", "price": 3, "rating": 4.2, "sales": 920, "canteenId": 1 }
+  ],
+  "hourlyFlow": {
+    "hours": ["6:00", "7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"],
+    "first": [120, 280, 150, 60, 40, 320, 580, 420, 100, 80, 90, 350, 520, 380, 120],
+    "second": [180, 350, 200, 80, 50, 450, 720, 500, 120, 100, 110, 480, 650, 450, 150],
+    "third": [90, 200, 120, 50, 30, 250, 430, 310, 80, 70, 75, 280, 400, 290, 100]
+  },
+  "categorySales": [
+    { "category": "荤菜", "value": 7340 },
+    { "category": "素菜", "value": 3780 },
+    { "category": "主食", "value": 2980 },
+    { "category": "凉菜", "value": 760 },
+    { "category": "汤类", "value": 920 }
+  ]
+}

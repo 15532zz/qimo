@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>校园生活服务数据中心 - 首页</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- 自定义样式 -->
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-mortarboard-fill"></i>校园生活服务数据中心
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html"><i class="bi bi-house"></i> 首页</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/cafeteria.html"><i class="bi bi-egg-fried"></i> 食堂数据</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/studyroom.html"><i class="bi bi-book"></i> 自习室管理</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面头部 -->
+  <header class="page-header">
+    <div class="container">
+      <h1><i class="bi bi-graph-up-arrow"></i> 校园生活服务数据中心</h1>
+      <p>实时掌握食堂客流、菜品热度与自习室座位情况，让校园生活更高效</p>
+    </div>
+  </header>
+
+  <!-- 主内容 -->
+  <main class="container pb-5">
+
+    <!-- 数据概览卡片 -->
+    <div class="row g-3 mb-4">
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#60a5fa,#2563eb)"><i class="bi bi-egg-fried"></i></div>
+          <div class="stat-value" id="stat-canteens">-</div>
+          <div class="stat-label">食堂数量</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#f472b6,#db2777)"><i class="bi bi-basket"></i></div>
+          <div class="stat-value" id="stat-dishes">-</div>
+          <div class="stat-label">在售菜品</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#34d399,#059669)"><i class="bi bi-book"></i></div>
+          <div class="stat-value" id="stat-rooms">-</div>
+          <div class="stat-label">自习室数量</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#fbbf24,#d97706)"><i class="bi bi-person-check"></i></div>
+          <div class="stat-value" id="stat-seats">-</div>
+          <div class="stat-label">可用座位</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 图表区 -->
+    <div class="row g-3 mb-4">
+      <div class="col-lg-8">
+        <div class="chart-card">
+          <h5><i class="bi bi-bar-chart-line"></i> 各食堂分时人流趋势</h5>
+          <div id="chart-flow" class="chart-container"></div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="chart-card">
+          <h5><i class="bi bi-pie-chart"></i> 菜品分类销量占比</h5>
+          <div id="chart-pie" class="chart-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3D 校园展示 -->
+    <div class="row g-3 mb-4">
+      <div class="col-12">
+        <div class="chart-card">
+          <h5><i class="bi bi-box-seam"></i> 三维校园建筑展示 <small class="text-muted fw-normal">（可拖拽旋转、滚轮缩放）</small></h5>
+          <div id="three-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 功能入口 -->
+    <div class="row g-3">
+      <div class="col-md-6">
+        <a href="pages/cafeteria.html" class="text-decoration-none">
+          <div class="stat-card">
+            <div class="d-flex align-items-center">
+              <div class="stat-icon me-3" style="background:linear-gradient(135deg,#60a5fa,#2563eb)"><i class="bi bi-egg-fried"></i></div>
+              <div class="flex-grow-1">
+                <h5 class="mb-1 text-dark">食堂数据展示</h5>
+                <p class="text-muted mb-0">查看各食堂详情、菜品搜索筛选、客流与销量图表</p>
+              </div>
+              <i class="bi bi-chevron-right text-primary fs-3"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="pages/studyroom.html" class="text-decoration-none">
+          <div class="stat-card">
+            <div class="d-flex align-items-center">
+              <div class="stat-icon me-3" style="background:linear-gradient(135deg,#34d399,#059669)"><i class="bi bi-book"></i></div>
+              <div class="flex-grow-1">
+                <h5 class="mb-1 text-dark">自习室管理</h5>
+                <p class="text-muted mb-0">查询座位、添加/修改自习室、使用率趋势图表</p>
+              </div>
+              <i class="bi bi-chevron-right text-primary fs-3"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white-50 py-3 mt-5">
+    <div class="container text-center small">
+      校园生活服务数据中心 &copy; 2026 | 基于 Bootstrap + jQuery + ECharts + Three.js 构建
+    </div>
+  </footer>
+
+  <!-- JS 依赖 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+
+  <script src="js/common.js"></script>
+  <script src="js/three-scene.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

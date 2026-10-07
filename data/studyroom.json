@@ -1,0 +1,25 @@
+{
+  "rooms": [
+    { "id": 1, "name": "图书馆一楼自习室", "location": "图书馆", "capacity": 120, "available": 45, "openTime": "07:00-22:30", "hasPower": true, "hasWifi": true },
+    { "id": 2, "name": "图书馆二楼自习室", "location": "图书馆", "capacity": 150, "available": 30, "openTime": "07:00-22:30", "hasPower": true, "hasWifi": true },
+    { "id": 3, "name": "图书馆三楼静音区", "location": "图书馆", "capacity": 80, "available": 12, "openTime": "07:00-22:30", "hasPower": true, "hasWifi": true },
+    { "id": 4, "name": "教学楼A101", "location": "教学楼A", "capacity": 200, "available": 80, "openTime": "08:00-21:00", "hasPower": false, "hasWifi": true },
+    { "id": 5, "name": "教学楼B203", "location": "教学楼B", "capacity": 120, "available": 55, "openTime": "08:00-21:00", "hasPower": true, "hasWifi": true },
+    { "id": 6, "name": "教学楼C305", "location": "教学楼C", "capacity": 100, "available": 0, "openTime": "08:00-21:00", "hasPower": false, "hasWifi": false },
+    { "id": 7, "name": "信息楼研讨间1", "location": "信息楼", "capacity": 10, "available": 3, "openTime": "09:00-21:00", "hasPower": true, "hasWifi": true },
+    { "id": 8, "name": "信息楼研讨间2", "location": "信息楼", "capacity": 10, "available": 0, "openTime": "09:00-21:00", "hasPower": true, "hasWifi": true }
+  ],
+  "usageTrend": {
+    "days": ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+    "morning": [65, 72, 68, 70, 75, 45, 38],
+    "afternoon": [78, 82, 80, 85, 88, 60, 52],
+    "evening": [88, 90, 87, 92, 95, 70, 65]
+  },
+  "buildingStats": [
+    { "building": "图书馆", "rooms": 3, "totalSeats": 350 },
+    { "building": "教学楼A", "rooms": 1, "totalSeats": 200 },
+    { "building": "教学楼B", "rooms": 1, "totalSeats": 120 },
+    { "building": "教学楼C", "rooms": 1, "totalSeats": 100 },
+    { "building": "信息楼", "rooms": 2, "totalSeats": 20 }
+  ]
+}

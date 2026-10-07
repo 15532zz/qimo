@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>食堂数据展示 - 校园生活服务数据中心</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="../css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <i class="bi bi-mortarboard-fill"></i>校园生活服务数据中心
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-house"></i> 首页</a></li>
+          <li class="nav-item"><a class="nav-link active" href="cafeteria.html"><i class="bi bi-egg-fried"></i> 食堂数据</a></li>
+          <li class="nav-item"><a class="nav-link" href="studyroom.html"><i class="bi bi-book"></i> 自习室管理</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <h1><i class="bi bi-egg-fried"></i> 食堂数据展示</h1>
+      <p>查询各食堂基本信息、搜索菜品、查看客流与销量数据</p>
+    </div>
+  </header>
+
+  <main class="container pb-5">
+
+    <!-- 食堂概览 -->
+    <h2 class="section-title"><i class="bi bi-shop"></i> 食堂概览</h2>
+    <div class="row g-3 mb-4" id="canteen-list">
+      <!-- 动态渲染食堂卡片 -->
+    </div>
+
+    <!-- 菜品搜索与筛选 -->
+    <h2 class="section-title"><i class="bi bi-search"></i> 菜品查询</h2>
+    <div class="filter-bar">
+      <div class="row g-2 align-items-center">
+        <div class="col-md-4">
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-search"></i></span>
+            <input type="text" id="search-input" class="form-control" placeholder="搜索菜品名称..." />
+          </div>
+        </div>
+        <div class="col-md-3">
+          <select id="filter-category" class="form-select">
+            <option value="">全部分类</option>
+            <option value="荤菜">荤菜</option>
+            <option value="素菜">素菜</option>
+            <option value="主食">主食</option>
+            <option value="凉菜">凉菜</option>
+            <option value="汤类">汤类</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select id="filter-canteen" class="form-select">
+            <option value="">全部食堂</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <button id="btn-reset" class="btn btn-outline-secondary w-100"><i class="bi bi-arrow-clockwise"></i> 重置</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 菜品表格 -->
+    <div class="table-responsive">
+      <table class="table table-hover align-middle">
+        <thead class="table-light">
+          <tr>
+            <th>菜品名称</th>
+            <th>分类</th>
+            <th>价格</th>
+            <th>评分</th>
+            <th>销量</th>
+            <th>所属食堂</th>
+          </tr>
+        </thead>
+        <tbody id="dish-tbody">
+        </tbody>
+      </table>
+      <div id="dish-empty" class="text-center text-muted py-4" style="display:none;">
+        <i class="bi bi-inbox fs-1 d-block mb-2"></i>未找到符合条件的菜品
+      </div>
+    </div>
+
+    <!-- 图表区 -->
+    <div class="row g-3 mt-4">
+      <div class="col-lg-8">
+        <div class="chart-card">
+          <h5><i class="bi bi-bar-chart"></i> 菜品销量 TOP 8</h5>
+          <div id="chart-sales" class="chart-container"></div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="chart-card">
+          <h5><i class="bi bi-pie-chart"></i> 菜品分类销量占比</h5>
+          <div id="chart-category" class="chart-container"></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-dark text-white-50 py-3 mt-5">
+    <div class="container text-center small">
+      校园生活服务数据中心 &copy; 2026
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+  <script src="../js/common.js"></script>
+  <script src="cafeteria.js"></script>
+</body>
+</html>
